@@ -20,8 +20,8 @@ self.yaw[i+1] = self.yaw[i] + angular_velocity*self.dt
 The input to the optimizer is the reference trajectory:
 ![Reference trajectory to optimize control for](figures/reference_trajectory.jpeg)
 
-The optimizer computes controls (acceleration and streering) such that realized trajectory (via bicycle model) minimizes L2 loss
+The optimizer computes model controls (acceleration and streering) such that the realized trajectory (via bicycle model) minimizes L2 loss. This figure shows the input reference trajectory in blue and computed/optimized trajectory (by optimizing controls) in red: 
 ![Optimized trajectory (in red) vs reference trajectory (in blue)](figures/optimized_trajectory_and_reference.jpeg)
 
-L2/MSE loss example:
+This figure shows resulting L2/MSE loss:
 ![Loss](figures/loss.jpeg)
