@@ -18,10 +18,10 @@ self.y[i+1] = self.y[i] + self.speed[i]*torch.sin(self.yaw[i])*self.dt
 self.yaw[i+1] = self.yaw[i] + angular_velocity*self.dt
 ```
 The input to the optimizer is the reference trajectory:
-![Reference trajectory to optimize control for](reference_trajectory.jpg)
+![Reference trajectory to optimize control for](figures/reference_trajectory.jpg)
 
 The optimizer computes controls (acceleration and streering) such that realized trajectory (via bicycle model) minimizes L2 loss
-![Optimized trajectory (in red) vs reference trajectory (in blue)](optimized_trajectory_and_reference.jpg)
+![Optimized trajectory (in red) vs reference trajectory (in blue)](figures/optimized_trajectory_and_reference.jpg)
 
 L2/MSE loss example:
 ![Loss](figures/loss.jpg)
